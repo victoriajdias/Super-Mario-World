@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "super-mario";
+  src: url(/fontes/SuperMarioWorld.ttf);
+}
+
+@keyframes movimentarInimigo {
+  from {
+    right: -180px;
+  }
+
+  to {
+    right: 105%;
+  }
+}
+
+@keyframes puloMario {
+  0% {
+    bottom: 96px;
+  }
+  50% {
+    bottom: 290px;
+  }
+  60% {
+    bottom: 290px;
+  }
+  70% {
+    bottom: 290px;
+  }
+  80% {
+    bottom: 290px;
+  }
+  90% {
+    bottom: 290px;
+  }
+  100% {
+    bottom: 96px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "super-mario";
+  font-size: 24px;
+}
+
+.puloMario {
+  animation: puloMario 500ms ease-out;
+}
+
+#game-board {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(images/cenario.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#ceu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(images/cenarioceu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+}
+
+#mario {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-image: url(images/marioParadoLadoDireito.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0;
+  bottom: 96px;
+  left: 0;
+}
+
+.movimentarInimigo {
+  animation: movimentarInimigo 16s infinite linear;
+}
+
+#inimigo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url(images/inimigoLadoEsquerdo.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0;
+  bottom: 96px;
+  right: -100px;
+}
+
+#menu {
+  position: absolute;
+  width: 1200px;
+  height: 150px;
+  background-image: url(images/menuDoJogo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0;
+  top: 20px;
+}
+
+#bloco {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url(images/bloco.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0;
+  right: 450px;
+  top: 490px;
+}
+
+#tempo {
+  position: absolute;
+  top: 94px;
+  right: 675px;
+  color: #ffdf73;
+}
+
+#vidas {
+  position: absolute;
+  top: 102px;
+  left: 420px;
+  color: #fff;
+}
+
+#moedas {
+  position: absolute;
+  top: 70px;
+  right: 350px;
+  color: #fff;
+}
+
+#pontos {
+  position: absolute;
+  top: 100px;
+  right: 349px;
+  color: #fff;
+}
+
+#reiniciar {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#iniciar {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  display: block;
+}
